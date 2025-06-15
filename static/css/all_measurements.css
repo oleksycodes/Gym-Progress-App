@@ -1,0 +1,58 @@
+.full-history {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+.full-history h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.measurements-list {
+    margin-bottom: 20px;
+}
+
+.measurement-card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.measurement-date {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #4361ee;
+}
+
+.measurement-values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.measurement-values span {
+    font-weight: 500;
+    color: #7f8c8d;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #4361ee;
+    text-decoration: none;
+    border: 1px solid #4361ee;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.back-link:hover {
+    background: #f0f4ff;
+}

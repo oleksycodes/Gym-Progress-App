@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}Dzienniczek – {{ selected_date }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/calendar_entry.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="diary-entry-container">
+    <h1 class="entry-date">Dzienniczek – {{ selected_date }}</h1>
+
+    {% if log %}
+    <div class="entry-box">
+        <div><strong>Waga:</strong> {{ log.weight }} kg</div>
+        <div><strong>Czas snu:</strong> {{ log.sleep_duration }} h</div>
+        <div><strong>Godzina pobudki:</strong> {{ log.wake_time.strftime('%H:%M') }}</div>
+        <div><strong>Godzina snu:</strong> {{ log.bed_time.strftime('%H:%M') }}</div>
+        <div><strong>Trening:</strong> {{ log.training }}</div>
+        <div><strong>Głód (1–10):</strong> {{ log.hunger }}</div>
+        <div><strong>Stres (1–10):</strong> {{ log.stress }}</div>
+        <div><strong>Notatka:</strong> {{ log.note or "—" }}</div>
+    </div>
+    {% else %}
+    <div class="no-entry">
+        <p>Brak wpisu dla tego dnia.</p>
+        <a href="{{ url_for('diary_form') }}?data={{ selected_date }}" class="btn">➕ Dodaj wpis</a>
+    </div>
+    {% endif %}
+
+    <a href="{{ url_for('calendar_view') }}" class="back-link">← Powrót do kalendarza</a>
+</div>
+{% endblock %}

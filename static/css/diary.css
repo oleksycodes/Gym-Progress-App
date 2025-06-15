@@ -1,0 +1,81 @@
+.diary-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px 15px 50px;
+}
+
+.diary-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.diary-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row label {
+    font-size: 0.9rem;
+    color: #34495e;
+    margin-bottom: 4px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+
+.diary-btn {
+    padding: 10px;
+    background-color: #4361ee;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s ease;
+}
+
+.diary-btn:hover {
+    background-color: #3a4fcf;
+}
+
+.diary-day {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.diary-day h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.log-view p {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.edit-btn, .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #4361ee;
+    text-decoration: none;
+}
+
+.edit-btn:hover, .back-link:hover {
+    text-decoration: underline;
+}

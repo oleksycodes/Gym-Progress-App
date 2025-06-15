@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}Ostatnie 7 dni dzienniczka{% endblock %}
+
+{% block content %}
+<div class="last-7-days">
+    <h2>Ostatnie 7 dni dzienniczka</h2>
+    <table class="log-table">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Waga</th>
+                <th>Sen (h)</th>
+                <th>Godzina snu</th>
+                <th>Pobudka</th>
+                <th>Trening</th>
+                <th>Głód</th>
+                <th>Stres</th>
+                <th>Notatka</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logs %}
+            <tr>
+                <td>{{ log.date.strftime('%Y-%m-%d') }}</td>
+                <td>{{ log.weight }}</td>
+                <td>{{ log.sleep_duration }}</td>
+                <td>{{ log.bed_time }}</td>
+                <td>{{ log.wake_time }}</td>
+                <td>{{ log.training }}</td>
+                <td>{{ log.hunger }}</td>
+                <td>{{ log.stress }}</td>
+                <td>{{ log.note }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.last-7-days {
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.log-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.log-table th, .log-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.log-table th {
+    background-color: #f0f0f0;
+}
+</style>
+{% endblock %}

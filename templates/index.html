@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+  <div class="header">
+    <div>
+      <h1 class="title">Dashboard</h1>
+      <p class="subtitle">Witaj z powrotem! Poniżej znajdziesz swoje najnowsze dane.</p>
+    </div>
+  </div>
+
+  <h2 class="section-title">Ostatnie wpisy dzienniczka</h2>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Waga</th>
+          <th>Trening</th>
+          <th>Głód</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for log in logs %}
+        <tr>
+          <td>{{ log.log_date.strftime('%Y-%m-%d') }}</td>
+          <td>{{ log.weight }} kg</td>
+          <td>{{ log.training }}</td>
+          <td>{{ log.hunger }}/10</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  
+
+  <h2 class="section-title">Treningi w tygodniu</h2>
+  <div class="card-container">
+    <div class="training-card">
+      <p class="card-title">Średnia liczba treningów</p>
+      <p class="card-value">3</p>
+      <p class="card-sub">Ostatnie 4 tygodnie</p>
+      <div class="bar-chart">
+        <div class="bar" style="height: 100%"></div>
+        <div class="bar" style="height: 70%"></div>
+        <div class="bar" style="height: 30%"></div>
+        <div class="bar" style="height: 60%"></div>
+      </div>
+      <div class="bar-labels">
+        <span>Tydz 1</span><span>Tydz 2</span><span>Tydz 3</span><span>Tydz 4</span>
+      </div>
+    </div>
+  </div>
+
+  </div>
+{% endblock %}
+
+{% block extra_js %}
+
+{% endblock %}

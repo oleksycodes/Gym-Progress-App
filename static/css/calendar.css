@@ -1,0 +1,93 @@
+.calendar-container {
+    max-width: 420px;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.06);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.calendar-title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2f57ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.calendar-title::before {
+    content: "📅";
+    font-size: 1.5rem;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+.calendar-cell {
+    background: #f1f5ff;
+    border-radius: 10px;
+    padding: 0.8rem 0;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    transition: 0.2s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.calendar-cell:hover {
+    background: #dbe5ff;
+    transform: scale(1.05);
+}
+
+.calendar-cell.today {
+    background: #2f57ef;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #1f3bcf;
+}
+
+.calendar-cell.empty {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.calendar-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    padding: 4px 10px;
+    color: #2f57ef;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.nav-btn:hover {
+    transform: scale(1.2);
+}

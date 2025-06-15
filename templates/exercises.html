@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}Ćwiczenia{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/exercises.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="exercise-container">
+    <h1 class="exercise-heading">Dzisiejszy trening – <span id="training-label">Trening ?</span></h1>
+    <p class="subtext">Poniżej możesz uzupełnić wykonane serie, ciężar oraz liczbę powtórzeń.</p>
+
+    <div id="exercise-form">
+        <!-- Ćwiczenia zostaną wczytane przez JavaScript -->
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/exercises.js') }}"></script>
+{% endblock %}

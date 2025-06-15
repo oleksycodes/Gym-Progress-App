@@ -1,0 +1,172 @@
+.measurements-compact {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 15px;
+    padding-bottom: 70px;
+    
+}
+
+.compact-title {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.compact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.compact-input {
+    margin-bottom: 8px;
+}
+
+.compact-input label {
+    display: block;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-bottom: 3px;
+}
+
+.compact-input input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.compact-btn {
+    width: 100%;
+    padding: 10px;
+    background: #4361ee;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.compact-history {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.compact-history h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.last-measurement {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #34495e;
+}
+
+.last-measurement div {
+    margin-bottom: 5px;
+}
+
+.history-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #4361ee;
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 8px;
+    border: 1px solid #4361ee;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.history-link:hover {
+    background: #f0f4ff;
+}
+
+.last-measurement {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #34495e;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+#notifications-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.notification {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 9999;
+    max-width: 90%;
+    text-align: center;
+}
+
+.notification.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+
+.notification-success {
+    background-color: #4CAF50;
+    border-bottom: 3px solid #388E3C;
+}
+
+.measurement-instructions {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.measurement-instructions h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.measurement-instructions table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.measurement-instructions th,
+.measurement-instructions td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.measurement-instructions th {
+    background-color: #efefef;
+    font-weight: bold;
+}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}Kalendarz{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/calendar.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="calendar-container">
+    <div class="calendar-header-top">
+        <button id="prev-month" class="nav-btn">‹</button>
+        <h1 class="calendar-title" id="calendar-month-title">Czerwiec 2025</h1>
+        <button id="next-month" class="nav-btn">›</button>
+    </div>
+    <div class="calendar-header">
+        <div>Pon</div><div>Wt</div><div>Śr</div><div>Czw</div><div>Pt</div><div>Sob</div><div>Nd</div>
+    </div>
+    <div id="calendar-grid" class="calendar-grid"></div>
+</div>
+<div class="calendar-actions">
+    <a href="{{ url_for('last_7_days') }}" target="_blank" class="btn-export">
+        📅 Pokaż ostatnie 7 dni dzienniczka
+    </a>
+</div>
+
+{% endblock %}
+
+
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/calendar.js') }}"></script>
+{% endblock %}

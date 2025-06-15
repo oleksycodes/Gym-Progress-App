@@ -1,0 +1,115 @@
+.dashboard-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #121417;
+  }
+  
+  .subtitle {
+    color: #677583;
+    font-size: 14px;
+  }
+  
+  .section-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #121417;
+    margin: 2rem 0 1rem 0;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+    border: 1px solid #dde0e4;
+    border-radius: 12px;
+    background-color: white;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+    font-size: 14px;
+    color: #677583;
+  }
+  
+  th {
+    background-color: #f9f9fb;
+    color: #121417;
+    font-weight: 600;
+  }
+  
+  tr:not(:last-child) {
+    border-bottom: 1px solid #dde0e4;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .training-card {
+    flex: 1;
+    min-width: 250px;
+    padding: 1.5rem;
+    border: 1px solid #dde0e4;
+    border-radius: 12px;
+    background-color: white;
+  }
+  
+  .card-title {
+    font-size: 16px;
+    color: #121417;
+    margin-bottom: 0.25rem;
+  }
+  
+  .card-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #121417;
+  }
+  
+  .card-sub {
+    font-size: 14px;
+    color: #677583;
+    margin-bottom: 1rem;
+  }
+  
+  .bar-chart {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    height: 100px;
+  }
+  
+  .bar {
+    flex: 1;
+    background-color: #f1f2f4;
+    border-top: 2px solid #677583;
+  }
+  
+  .bar-labels {
+    display: flex;
+    justify-content: space-around;
+    font-size: 13px;
+    color: #677583;
+    margin-top: 0.5rem;
+  }
+  

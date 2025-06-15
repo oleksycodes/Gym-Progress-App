@@ -1,0 +1,113 @@
+.exercise-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.exercise-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #121417;
+}
+
+.subtext {
+    color: #677583;
+    margin-bottom: 2rem;
+}
+
+.exercise-card {
+    border: 1px solid #dde0e4;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #f9f9f9;
+}
+
+.exercise-name {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+    color: #121417;
+}
+
+.series-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.series-inputs input {
+    width: 80px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.series-label {
+    font-size: 13px;
+    margin-bottom: 0.3rem;
+    color: #555;
+}
+
+.exercise-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-heading {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subtext {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.exercise-block {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.exercise-block label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.set-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.set-group input {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.set-group input:focus {
+    border-color: #4caf50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}

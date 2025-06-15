@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}Wszystkie pomiary{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/all_measurements.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="full-history">
+    <h1>Historia pomiarów</h1>
+    
+    <div class="measurements-list">
+        {% for m in measurements %}
+        <div class="measurement-card">
+            <div class="measurement-date">{{ m.date.strftime('%d.%m.%Y') }}</div>
+            <div class="measurement-values">
+                <div><span>Talia:</span> {{ m.waist }} cm</div>
+                <div><span>Biodra:</span> {{ m.hips }} cm</div>
+                <div><span>Klatka:</span> {{ m.chest }} cm</div>
+                <div><span>Udo:</span> {{ m.thigh }} cm</div>
+                <div><span>Łydka:</span> {{ m.calf }} cm</div>
+                <div><span>Ramię:</span> {{ m.arm }} cm</div>
+                <div><span>Pas:</span> {{ m.beltline }} cm</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <a href="/pomiary" class="back-link">← Powrót do pomiarów</a>
+</div>
+{% endblock %}

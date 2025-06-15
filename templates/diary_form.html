@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}Dzienniczek{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/diary.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="diary-container">
+    <h1 class="diary-title">Dzienniczek klienta</h1>
+
+    <form id="diary-form" class="diary-form">
+        <div class="form-row">
+            <label for="log_date">Data</label>
+            <input type="date" name="log_date" id="log_date" required value="{{ now }}">
+        </div>
+
+        <div class="form-row">
+            <label for="weight">Waga (kg)</label>
+            <input type="number" step="0.1" name="weight" id="weight" required>
+        </div>
+
+        <div class="form-row">
+            <label for="sleep_duration">Czas snu (h)</label>
+            <input type="number" step="0.1" name="sleep_duration" id="sleep_duration" required>
+        </div>
+
+        <div class="form-row">
+            <label for="wake_time">Godzina pobudki</label>
+            <input type="time" name="wake_time" id="wake_time">
+        </div>
+
+        <div class="form-row">
+            <label for="bed_time">Godzina snu</label>
+            <input type="time" name="bed_time" id="bed_time">
+        </div>
+
+        <div class="form-row">
+            <label for="training">Trening</label>
+            <select name="training" id="training" required>
+                <option value="">Brak</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="hunger">Głód (1-10)</label>
+            <input type="number" name="hunger" id="hunger" min="1" max="10">
+        </div>
+
+        <div class="form-row">
+            <label for="stress">Stres (1-10)</label>
+            <input type="number" name="stress" id="stress" min="1" max="10">
+        </div>
+
+        <div class="form-row">
+            <label for="note">Notatka</label>
+            <textarea name="note" id="note" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="diary-btn">Zapisz dzień</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/diary.js') }}"></script>
+{% endblock %}
