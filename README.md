@@ -20,6 +20,8 @@ It helps users track:
 
 ## 🖼️ Preview
 
+### Live - https://gym.mateuszoleksy.pl/
+
 ### Dashboard
 <img src="images/dashboard.png" alt="Dashboard" width="400"/>
 
